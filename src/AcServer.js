@@ -203,6 +203,7 @@ class AcServer {
     this._process.on('close', (code) => {
       if (this.stopped) return;
       console.log(`AC server exited with code ${code}`);
+      process.exit(1)
     });
   }
 
